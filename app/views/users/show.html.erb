@@ -1,0 +1,15 @@
+<% if @user.admin %>
+<h1>WELCOME ADMIN !!!!</h1>
+<% end %>
+<% if !flash.empty? %>
+<h1><%= flash[:notice] %></h1>
+<% end %>
+
+
+Name: <%= @user.name%>
+Mood: <%= @user.mood%>
+Tickets: <%= @user.tickets%>
+Height: <%= @user.height%>
+
+<%= link_to 'Log Out', logout_path %>
+<%= link_to 'See attractions', attractions_path %>
